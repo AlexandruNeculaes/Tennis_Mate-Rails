@@ -1,0 +1,21 @@
+<div class="container-fluid bg-dark text-light p-5">
+    <div class="container bg-dark p-5">
+          <h2 class="display-4">
+    <%= @mate.name %>
+  </h2>
+        <hr>
+        <p class="lead">
+    <%= @mate.phone %> |
+    <%= @mate.email %>  | 
+    <%= @mate.location %>  |  
+    <%= @mate.level_of_play %>
+
+  </p>
+  <br/>
+    <%= link_to 'Edit', edit_mate_path(@mate), class:"btn btn-success" %>
+  
+    <%= link_to 'Back', mates_path, class:"btn btn-primary" %> </br></br>
+
+    <%= button_to 'Delete', @mate, :method=>  :delete, class: "btn btn-danger" %>
+    </div>
+</div>

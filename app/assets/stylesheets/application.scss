@@ -1,0 +1,38 @@
+@import "bootstrap-sprockets";
+
+h1 {
+  color: darkred;
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
+  color: red;
+}
+
+h4 {
+  font-style: oblique;
+}
+
+h3 {
+  text-align: center;
+  font-style: italic;
+}
+
+.nav-item {
+  color: yellowgreen !important;
+  font-size: large;
+}
+
+.navbar-brand {
+  font-size: large;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.logo {
+  width: 90px;
+  height: 84px;
+}

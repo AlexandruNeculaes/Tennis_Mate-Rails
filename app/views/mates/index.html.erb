@@ -1,0 +1,49 @@
+<% if user_signed_in? %>
+<h1>List of tennis mates</h1></br>
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr class="table-dark">
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Level of play</th>
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mates.each do |mate| %>
+    
+          <tr>
+        <td><%= link_to mate.name, mate %></td>
+        <td><%= mate.phone %></td>
+        <td><%= mate.email %></td>
+        <td><%= mate.location %></td>
+        <td><%= mate.level_of_play %></td>
+      </tr>
+    
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New mate", new_mate_path, class:"btn btn-success" %>
+
+<% else %>
+
+<body>
+<div class="index">
+
+  <h1>List of tennis mates</h1></br>
+    </br>
+
+  <h3> Please sign up or sign in to have access to the Tennis Mate world! </h3></br></br> 
+
+  <h3> Happy hitting! </h3>
+
+</div>
+</body>
+
+<% end %>
