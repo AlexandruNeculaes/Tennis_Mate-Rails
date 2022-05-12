@@ -64,7 +64,7 @@ class MatesController < ApplicationController
 
     def correct_user
     @mate = current_user.mates.find_by(id: params[:id])
-    redirect_to mates_path, notice: "Not Authorized To Edit This Friend" if @mate.nil?
+    redirect_to mates_path, notice: "Not Authorized To Edit This Mate" if @mate.nil?
   end
 
   private
